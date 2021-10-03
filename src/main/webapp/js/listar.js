@@ -19,7 +19,7 @@
 				var columna6 = document.createElement("td");
 				columna6.innerHTML = "<a class='btn-eliminar' onclick='eliminar(" + item.cedula_usuario + ")'>Eliminar</a>";
 				var columna7 = document.createElement("td");
-				columna7.innerHTML = "<a href = 'editarUsr.jsp?cedula=" +  item.cedula_usuario + "'>Editar</a>";
+				columna7.innerHTML = "<a onclick='mostrar(" + item.cedula_usuario + ")'>Editar</a>";
 
 				lista.appendChild(tr);
 				tr.appendChild(columna1);
@@ -43,3 +43,15 @@ function eliminar(cedula) {
 		}
 	})
 }
+
+function mostrar(cedula) {
+	$.ajax({
+		type: "GET",
+		url: "http://localhost:8080/api/usuario/" + cedula,
+		success: function() {
+			window.location.href = "/usuario/listar.jsp"
+		}
+	})
+}
+
+
