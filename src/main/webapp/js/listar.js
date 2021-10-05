@@ -19,7 +19,7 @@
 				var columna6 = document.createElement("td");
 				columna6.innerHTML = "<a class='btn-eliminar' onclick='eliminar(" + item.cedula_usuario + ")'>Eliminar</a>";
 				var columna7 = document.createElement("td");
-				columna7.innerHTML = "<a onclick='mostrar(" + item.cedula_usuario + ")'>Editar</a>";
+				columna7.innerHTML = "<a class='btn-editar' onclick='editar("+item.cedula_usuario+")'>Editar</a>";
 
 				lista.appendChild(tr);
 				tr.appendChild(columna1);
@@ -29,27 +29,23 @@
 				tr.appendChild(columna5);
 				tr.appendChild(columna6);
 				tr.appendChild(columna7);
+				
 			})
 		}
 	});
 })();
+
+function editar (cedula){
+	localStorage.setItem('cedula', cedula);
+	window.location.href ="/usuario/editar.jsp"
+}
 
 function eliminar(cedula) {
 	$.ajax({
 		type: "DELETE",
 		url: "http://localhost:8080/api/usuario/" + cedula,
 		success: function() {
-			window.location.href = "/usuario/listar.jsp"
-		}
-	})
-}
-
-function mostrar(cedula) {
-	$.ajax({
-		type: "GET",
-		url: "http://localhost:8080/api/usuario/" + cedula,
-		success: function() {
-			window.location.href = "/usuario/listar.jsp"
+			window.location.href = "/usuario/listar.jsp";
 		}
 	})
 }

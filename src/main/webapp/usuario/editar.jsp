@@ -14,12 +14,11 @@
 <body>
 	<h1>Editar Usuario</h1>
 	<div class="mx-auto" style="width: 700px;" >
-		<form class="row g-3 needs-validation">
+		<form id="form" class="row g-3 needs-validation">
 			<div class="col-md-6">
-				<label for="inputCedula" class="form-label">Cédula</label> <input
+				<label class="form-label">CÃ©dula</label> <input
 					type="text" class="form-control" id="inputCedula"
-					name="cedula_usuario" aria-describedby="inputGroupPrepend" required>
-				<div class="invalid-feedback">Por favor ingrese la cédula.</div>
+					name="cedula_usuario" aria-describedby="inputGroupPrepend">
 			</div>
 
 			<div class="col-md-6">
@@ -35,19 +34,19 @@
 				<div class="invalid-feedback">Por favor ingrese el nombre.</div>
 			</div>
 			<div class="col-md-5">
-				<label for="inputContraseña" class="form-label">Contraseña</label> <input
+				<label for="inputContraseÃ±a" class="form-label">ContraseÃ±a</label> <input
 					type="text" class="form-control" id="inputContrasena"
 					name="password" aria-describedby="inputGroupPrepend" required>
-				<div class="invalid-feedback">Por favor ingrese la contraseña.
+				<div class="invalid-feedback">Por favor ingrese la contraseÃ±a.
 				</div>
 			</div>
 			<div class="col-12">
 				<label for="inputCorreo" class="form-label">Correo
-					electrónico</label> <input type="email" class="form-control"
+					electrÃ³nico</label> <input type="email" class="form-control"
 					id="inputCorreo" placeholder="usuario@dominio.com"
 					name="email_usuario" aria-describedby="inputGroupPrepend" required>
 				<div class="invalid-feedback">Por favor ingrese el correo
-					electrónico.</div>
+					electrÃ³nico.</div>
 			</div>
 			<div class="col-12">
 				<button type="submit" class="btn btn-primary" onclick="editar()">Editar</button>
@@ -57,6 +56,6 @@
 	</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="/js/guardar.js"></script>
+	<script src="/js/editar.js"></script>
 </body>
 </html>

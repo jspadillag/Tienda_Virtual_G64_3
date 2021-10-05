@@ -17,7 +17,23 @@
 	$('#form').submit(function() {
 		return false;
 	});
+	const cedulaUser = localStorage.getItem('cedula');
+	mostrar(cedulaUser);
 })();
+
+function mostrar(cedulaUser) {
+	$.ajax({
+		type: "GET",
+		url: "http://localhost:8080/api/usuario/" + cedulaUser,
+		success: function(usuario) {
+			$('#inputCedula').val(usuario.cedula_usuario);
+			$('#inputUsuario').val(usuario.usuario);
+			$('#inputNombreC').val(usuario.nombre_usuario);
+			$('#inputContrasena').val(usuario.password);
+			$('#inputCorreo').val(usuario.email_usuario);
+		}
+	});
+}
 
 function editar() {
 	var usuario = {
@@ -28,13 +44,20 @@ function editar() {
 		nombre_usuario: document.getElementById("inputNombreC").value
 	};
 	$.ajax({
-		type: "UPDATE",
+		type: "PUT",
 		url: "http://localhost:8080/api/usuario",
 		dataType: "json",
 		contentType: 'application/json',
 		data: JSON.stringify(usuario),
-		success: function(response) {
-			window.location.href = "/usuario/listar.jsp"
+		success: function(data) {
+			$('.alert').alert()
+			window.location.href = "/usuario/listar.jsp";
 		}
 	});
 }
+
+
+
+
+
+
