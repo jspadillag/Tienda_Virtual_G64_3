@@ -42,7 +42,7 @@
 				<div class="row">
 
 					<button type="button" class="btn btn-primary"
-						onclick="window.location.href='/listarproductos'">
+						onclick="load_productos()">
 						<i class="fas fa-search"></i> Listar todos los Productos
 					</button>
 				</div>

@@ -12,6 +12,7 @@
 <title>Agregar</title>
 </head>
 <body>
+<jsp:include page="/menu/menu.jsp"></jsp:include>
 	<h1>Agregar Usuario</h1>
 	<div class="mx-auto" style="width: 700px;" >
 		<form class="row g-3 needs-validation">
