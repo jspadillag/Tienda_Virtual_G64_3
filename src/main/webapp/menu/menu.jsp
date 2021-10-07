@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="listar.jsp">Usuarios</a>
+          <a class="nav-link active" aria-current="page" href="/usuario/listar.jsp">Usuarios</a>
         </li>        
        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Clientes</a>
