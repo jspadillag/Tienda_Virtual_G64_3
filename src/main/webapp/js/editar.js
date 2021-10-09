@@ -50,7 +50,6 @@ function editar() {
 		contentType: 'application/json',
 		data: JSON.stringify(usuario),
 		success: function(data) {
-			$('.alert').alert()
 			window.location.href = "/usuario/listar.jsp";
 		}
 	});

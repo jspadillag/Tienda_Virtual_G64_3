@@ -15,7 +15,7 @@
 <jsp:include page="/menu/menu.jsp"></jsp:include>
 	<h1>Agregar Usuario</h1>
 	<div class="mx-auto" style="width: 700px;" >
-		<form class="row g-3 needs-validation">
+		<form id="form" class="row g-3 needs-validation">
 			<div class="col-md-6">
 				<label for="inputCedula" class="form-label">Cédula</label> <input
 					type="text" class="form-control" id="inputCedula"
