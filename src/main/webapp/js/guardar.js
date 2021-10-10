@@ -36,5 +36,5 @@ function guardar() {
 		success: function(data) {
 			window.location.href = "/usuario/listar.jsp"
 		}
-	});
+	});	
 }

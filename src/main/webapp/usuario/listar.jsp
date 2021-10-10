@@ -18,10 +18,10 @@
 <table class="table table-sm">
 		<thead>
 			<tr>
-<th>Cédula</th>
+<th>Cï¿½dula</th>
 <th>Correo</th>
 <th>Nombre</th>
-<th>Contraseña</th>
+<th>Contraseï¿½a</th>
 <th>Usuario</th>
 <th colspan = "2">Acciones</th>
 </tr>
@@ -30,6 +30,7 @@
 		</tbody>
 </table>
 </div>
+
 </body>
 <script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
