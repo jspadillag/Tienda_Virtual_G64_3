@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" href="/usuario/listar.jsp">Usuarios</a>
         </li>        
        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Clientes</a>
+          <a class="nav-link active" aria-current="page" href="/cliente/listarcliente.jsp">Clientes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Proveedores</a>

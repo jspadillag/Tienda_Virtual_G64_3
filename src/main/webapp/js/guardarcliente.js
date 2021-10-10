@@ -19,22 +19,22 @@
 	});
 })();
 
-function guardar() {
-	var usuario = {
-		cedula_usuario: document.getElementById("inputCedula").value,
-		email_usuario: document.getElementById("inputCorreo").value,
-		usuario: document.getElementById("inputUsuario").value,
-		password: document.getElementById("inputContrasena").value,
-		nombre_usuario: document.getElementById("inputNombreC").value
+function guardarcliente() {
+	var cliente = {
+		cedula_cliente: document.getElementById("inputCedula").value,
+		email_cliente: document.getElementById("inputCorreo").value,
+		direccion_cliente: document.getElementById("inputDireccion").value,
+		telefono_cliente: document.getElementById("inputTelefono").value,
+		nombre_cliente: document.getElementById("inputUsuario").value
 	};
 	$.ajax({
 		type: "POST",
-		url: "http://localhost:8080/api/usuario",
+		url: "http://localhost:8080/api/cliente",
 		dataType: "json",
 		contentType: 'application/json',
-		data: JSON.stringify(usuario),
+		data: JSON.stringify(cliente),
 		success: function(data) {
-			window.location.href = "/usuario/listar.jsp"
+			window.location.href = "/cliente/listarcliente.jsp"
 		}
 	});
 }

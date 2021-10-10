@@ -24,40 +24,34 @@
 function mostrar(cedulaUser) {
 	$.ajax({
 		type: "GET",
-		url: "http://localhost:8080/api/usuario/" + cedulaUser,
+		url: "http://localhost:8080/api/cliente/" + cedulaUser,
 		success: function(usuario) {
-			$('#inputCedula').val(usuario.cedula_usuario);
-			$('#inputUsuario').val(usuario.usuario);
-			$('#inputNombreC').val(usuario.nombre_usuario);
-			$('#inputContrasena').val(usuario.password);
-			$('#inputCorreo').val(usuario.email_usuario);
+			$('#inputCedula').val(usuario.cedula_cliente);
+			$('#inputUsuario').val(usuario.nombre_cliente);
+			$('#inputDireccion').val(usuario.direccion_cliente);
+			$('#inputTelefono').val(usuario.telefono_cliente);
+			$('#inputCorreo').val(usuario.email_cliente);
 		}
 	});
 }
 
 function editar() {
 	var usuario = {
-		cedula_usuario: document.getElementById("inputCedula").value,
-		email_usuario: document.getElementById("inputCorreo").value,
-		usuario: document.getElementById("inputUsuario").value,
-		password: document.getElementById("inputContrasena").value,
-		nombre_usuario: document.getElementById("inputNombreC").value
+		cedula_cliente: document.getElementById("inputCedula").value,
+		email_cliente: document.getElementById("inputCorreo").value,
+		nombre_cliente: document.getElementById("inputUsuario").value,
+		direccion_cliente: document.getElementById("inputDireccion").value,
+		telefono_cliente: document.getElementById("inputCorreo").value
 	};
 	$.ajax({
 		type: "PUT",
-		url: "http://localhost:8080/api/usuario",
+		url: "http://localhost:8080/api/cliente",
 		dataType: "json",
 		contentType: 'application/json',
 		data: JSON.stringify(usuario),
 		success: function(data) {
 			
-			window.location.href = "/usuario/listar.jsp";
+			window.location.href = "/cliente/listarcliente.jsp";
 		}
 	});
 }
-
-
-
-
-
-
