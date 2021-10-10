@@ -18,10 +18,10 @@
 <table class="table table-sm">
 		<thead>
 			<tr>
-<th>Cédula</th>
+<th>Cï¿½dula</th>
 <th>Correo</th>
 <th>Nombre</th>
-<th>Contraseña</th>
+<th>Contraseï¿½a</th>
 <th>Usuario</th>
 <th colspan = "2">Acciones</th>
 </tr>
@@ -29,25 +29,6 @@
 		<tbody id="myTable">
 		</tbody>
 </table>
-<nav aria-label="Page navigation example">
-  <ul class="pagination pg-blue">
-    <li class="page-item">
-      <a class="page-link" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link">1</a></li>
-    <li class="page-item"><a class="page-link">2</a></li>
-    <li class="page-item"><a class="page-link">3</a></li>
-    <li class="page-item">
-      <a class="page-link" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
 </div>
 
 </body>
