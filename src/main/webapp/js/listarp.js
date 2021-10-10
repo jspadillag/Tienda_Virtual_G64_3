@@ -1,7 +1,7 @@
 (function() {
 	$.ajax({
 		type: "GET",
-		url: "http://localhost:8080/api/proveedor",
+		url: "http://localhost:8080/api/Proveedor",
 		success: function(listado) {
 			listado.forEach((item) => {
 				lista = document.getElementById("myTable");
@@ -37,9 +37,9 @@
 function eliminarp(nitproveedor) {
 	$.ajax({
 		type: "DELETE",
-		url: "http://localhost:8080/api/proveedores/" + nitproveedor,
+		url: "http://localhost:8080/api/Proveedores/" + nitproveedor,
 		success: function() {
-			window.location.href = "/proveedores/listar.jsp"
+			window.location.href = "/Proveedores/listar.jsp"
 		}
 	})
 }
@@ -47,9 +47,9 @@ function eliminarp(nitproveedor) {
 function mostrarp(nitproveedor) {
 	$.ajax({
 		type: "GET",
-		url: "http://localhost:8080/api/proveedores/" + nitproveedor,
+		url: "http://localhost:8080/api/Proveedores/" + nitproveedor,
 		success: function() {
-			window.location.href = "/proveedores/listar.jsp"
+			window.location.href = "/Proveedores/listar.jsp"
 		}
 	})
 }

@@ -13,7 +13,7 @@
           <a class="nav-link active" aria-current="page" href="#">Clientes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Proveedores</a>
+          <a class="nav-link active" aria-current="page" href="/Proveedores/listar.jsp">Proveedores</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Productos</a>

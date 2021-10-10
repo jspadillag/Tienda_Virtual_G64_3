@@ -32,7 +32,7 @@ function guardar() {
 		url: "http://localhost:8080/api/proveedores",
 		dataType: "json",
 		contentType: 'application/json',
-		data: JSON.stringify(usuario),
+		data: JSON.stringify(proveedores),
 		success: function(response) {
 			window.location.href = "/proveedores/listar.jsp"
 		}
