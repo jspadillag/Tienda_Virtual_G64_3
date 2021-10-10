@@ -33,7 +33,7 @@ function guardar() {
 		dataType: "json",
 		contentType: 'application/json',
 		data: JSON.stringify(usuario),
-		success: function(data) {
+		success: function(response) {
 			window.location.href = "/usuario/listar.jsp"
 		}
 	});

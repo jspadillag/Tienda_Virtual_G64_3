@@ -19,22 +19,22 @@
 	});
 })();
 
-function editar() {
-	var usuario = {
-		cedula_usuario: document.getElementById("inputCedula").value,
-		email_usuario: document.getElementById("inputCorreo").value,
-		usuario: document.getElementById("inputUsuario").value,
-		password: document.getElementById("inputContrasena").value,
-		nombre_usuario: document.getElementById("inputNombreC").value
+function guardar() {
+	var proveedores = {
+		nitproveedor: document.getElementById("inputNitproveedor").value,
+		ciudad_proveedor: document.getElementById("inputCiudad_proveedor").value,
+		direccion_proveedor: document.getElementById("inputDireccion_proveedor").value,
+		nombre_proveedor: document.getElementById("inputNombre_proveedor").value,
+		telefono_proveedor: document.getElementById("inputTelefono_proveedor").value
 	};
 	$.ajax({
-		type: "UPDATE",
-		url: "http://localhost:8080/api/usuario",
+		type: "POST",
+		url: "http://localhost:8080/api/proveedores",
 		dataType: "json",
 		contentType: 'application/json',
 		data: JSON.stringify(usuario),
 		success: function(response) {
-			window.location.href = "/usuario/listar.jsp"
+			window.location.href = "/proveedores/listar.jsp"
 		}
 	});
 }

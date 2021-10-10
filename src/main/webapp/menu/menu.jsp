@@ -7,16 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/usuario/listar.jsp">Usuarios</a>
+          <a class="nav-link active" aria-current="page" href="listar.jsp">Usuarios</a>
         </li>        
        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/cliente/listarcliente.jsp">Clientes</a>
+          <a class="nav-link active" aria-current="page" href="#">Clientes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Proveedores</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/producto/guardarListarProducto.jsp">Productos</a>
+          <a class="nav-link active" aria-current="page" href="#">Productos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Ventas</a>
