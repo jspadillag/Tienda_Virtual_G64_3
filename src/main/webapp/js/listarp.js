@@ -37,7 +37,7 @@
 function eliminarp(nitproveedor) {
 	$.ajax({
 		type: "DELETE",
-		url: "http://localhost:8080/api/Proveedores/" + nitproveedor,
+		url: "http://localhost:8080/api/proveedores/" + nitproveedor,
 		success: function() {
 			window.location.href = "/Proveedores/listar.jsp"
 		}
@@ -47,7 +47,7 @@ function eliminarp(nitproveedor) {
 function mostrarp(nitproveedor) {
 	$.ajax({
 		type: "GET",
-		url: "http://localhost:8080/api/Proveedores/" + nitproveedor,
+		url: "http://localhost:8080/api/proveedores/" + nitproveedor,
 		success: function() {
 			window.location.href = "/Proveedores/listar.jsp"
 		}

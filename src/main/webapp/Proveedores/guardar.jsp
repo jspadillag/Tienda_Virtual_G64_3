@@ -14,7 +14,7 @@
 <body>
 	<h1>Agregar Proveedor</h1>
 	<div class="mx-auto" style="width: 700px;" >
-		<form class="row g-3 needs-validation">
+		<form class="row g-3 needs-validation" id="form">
 			<div class="col-md-6">
 				<label for="inputNitproveedor" class="form-label">Nit proveedor</label> <input
 					type="text" class="form-control" id="inputNitproveedor"
