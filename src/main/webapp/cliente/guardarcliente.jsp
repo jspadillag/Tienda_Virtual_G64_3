@@ -53,7 +53,7 @@
 			</div>
 			<div class="col-12">
 				<button type="submit" class="btn btn-primary" onclick="guardarcliente()">Agregar</button>
-				<button type="reset" class="btn btn-primary" onclick="location.href='/usuario/listarcliente.jsp'">Cancelar</button>
+				<button type="reset" class="btn btn-primary" onclick="location.href='/cliente/listarcliente.jsp'">Cancelar</button>
 			</div>
 		</form>
 	</div>
