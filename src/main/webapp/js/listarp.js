@@ -1,7 +1,7 @@
 (function() {
 	$.ajax({
 		type: "GET",
-		url: "http://localhost:8080/api/Proveedor",
+		url: "http://localhost:8080/api/proveedores",
 		success: function(listado) {
 			listado.forEach((item) => {
 				lista = document.getElementById("myTable");
