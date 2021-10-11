@@ -67,7 +67,7 @@ import tienda.tiendaVirtual.dto.Usuario;
 
 		public Proveedores editar(Proveedores proveedores) {
 			Conexion conexion = new Conexion();
-			String sql = "UPDATE Proveedores SET ciudad_proveedor = ?, direccion_proveedor = ?, nombre_proveedor = ?, telefono_proveedor = ?  WHERE nitproveedor = ?";
+			String sql = "UPDATE proveedores SET ciudad_proveedor = ?, direccion_proveedor = ?, nombre_proveedor = ?, telefono_proveedor = ?  WHERE nitproveedor = ?";
 
 			try {
 				PreparedStatement preparedStatement = conexion.getConexion().prepareStatement(sql);
@@ -90,7 +90,7 @@ import tienda.tiendaVirtual.dto.Usuario;
 
 		public void eliminarProveedores(String nitproveedor) {
 			Conexion conexion = new Conexion();
-			String sql = "DELETE FROM proveedores WHERE nitproveedores = ?";
+			String sql = "DELETE FROM proveedores WHERE nitproveedor = ?";
 			PreparedStatement preparedStatement;
 			try {
 				preparedStatement = conexion.getConexion().prepareStatement(sql);

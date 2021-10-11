@@ -34,7 +34,7 @@ function guardar() {
 		contentType: 'application/json',
 		data: JSON.stringify(proveedores),
 		success: function(response) {
-			window.location.href = "/proveedores/listar.jsp"
+			window.location.href = "/Proveedores/listar.jsp"
 		}
 	});
 }

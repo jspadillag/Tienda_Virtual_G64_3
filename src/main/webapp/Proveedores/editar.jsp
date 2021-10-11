@@ -14,7 +14,7 @@
 <body>
 	<h1>Editar Proveedor</h1>
 	<div class="mx-auto" style="width: 700px;" >
-		<form class="row g-3 needs-validation">
+		<form class="row g-3 needs-validation" id="form">
 			<div class="col-md-6">
 				<label for="inputNitproveedor" class="form-label">Nit proveedor</label> <input
 					type="text" class="form-control" id="inputNitproveedor"
@@ -49,12 +49,12 @@
 			</div>
 			<div class="col-12">
 				<button type="submit" class="btn btn-primary" onclick="editar()">Editar</button>
-				<button type="reset" class="btn btn-primary" onclick="location.href='/proveedores/listar.jsp'">Cancelar</button>
+				<button type="reset" class="btn btn-primary" onclick="location.href='/Proveedores/listar.jsp'">Cancelar</button>
 			</div>
 		</form>
 	</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="/js/guardarp.js"></script>
+	<script src="/js/editarp.js"></script>
 </body>
 </html>

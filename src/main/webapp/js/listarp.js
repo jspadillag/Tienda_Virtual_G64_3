@@ -17,9 +17,9 @@
 				var columna5 = document.createElement("td");
 				columna5.innerHTML = item.telefono_proveedor;
 				var columna6 = document.createElement("td");
-				columna6.innerHTML = "<a class='btn-eliminar' onclick='eliminarp(" + item.nitproveedor + ")'>Eliminar</a>";
+				columna6.innerHTML = "<a class='btn-eliminar' onclick='eliminar(" + item.nitproveedor + ")'>Eliminar</a>";
 				var columna7 = document.createElement("td");
-				columna7.innerHTML = "<a onclick='mostrarp(" + item.nitproveedor + ")'>Editar</a>";
+				columna7.innerHTML = "<a class='btn-editar' onclick='editar("+item.nitproveedor+")'>Editar</a>";
 
 				lista.appendChild(tr);
 				tr.appendChild(columna1);
@@ -34,24 +34,22 @@
 	});
 })();
 
-function eliminarp(nitproveedor) {
+function editar(nitproveedor){
+	localStorage.setItem('nitproveedor', nitproveedor);
+	window.location.href ="/Proveedores/editar.jsp"
+}
+
+
+
+function eliminar(nitproveedor) {
 	$.ajax({
 		type: "DELETE",
 		url: "http://localhost:8080/api/proveedores/" + nitproveedor,
 		success: function() {
-			window.location.href = "/Proveedores/listar.jsp"
+			window.location.href = "/Proveedores/listar.jsp";
 		}
 	})
 }
 
-function mostrarp(nitproveedor) {
-	$.ajax({
-		type: "GET",
-		url: "http://localhost:8080/api/proveedores/" + nitproveedor,
-		success: function() {
-			window.location.href = "/Proveedores/listar.jsp"
-		}
-	})
-}
 
 

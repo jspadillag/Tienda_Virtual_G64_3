@@ -17,6 +17,9 @@
 	$('#form').submit(function() {
 		return false;
 	});
+	
+	const nitProveedor = localStorage.getItem('nitproveedor');
+	mostrar(nitProveedor);
 })();
 
 function editar() {
@@ -28,13 +31,28 @@ function editar() {
 		telefono_proveedor: document.getElementById("inputTelefono_proveedor").value
 	};
 	$.ajax({
-		type: "UPDATE",
+		type: "PUT",
 		url: "http://localhost:8080/api/proveedores",
 		dataType: "json",
 		contentType: 'application/json',
 		data: JSON.stringify(proveedores),
 		success: function(response) {
-			window.location.href = "/proveedores/listar.jsp"
+			window.location.href = "/Proveedores/listar.jsp"
+		}
+	});
+}
+
+
+function mostrar(nitProveedor) {
+	$.ajax({
+		type: "GET",
+		url: "http://localhost:8080/api/proveedores/" + nitProveedor,
+		success: function(proveedor) {
+			$('#inputNitproveedor').val(proveedor.nitproveedor);
+			$('#inputCiudad_proveedor').val(proveedor.ciudad_proveedor);
+			$('#inputDireccion_proveedor').val(proveedor.direccion_proveedor);
+			$('#inputNombre_proveedor').val(proveedor.nombre_proveedor);
+			$('#inputTelefono_proveedor').val(proveedor.telefono_proveedor);
 		}
 	});
 }
