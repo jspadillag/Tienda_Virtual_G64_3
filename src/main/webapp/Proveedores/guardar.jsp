@@ -12,6 +12,7 @@
 <title>Agregar</title>
 </head>
 <body>
+<jsp:include page="/menu/menu.jsp"></jsp:include>
 	<h1>Agregar Proveedor</h1>
 	<div class="mx-auto" style="width: 700px;" >
 		<form class="row g-3 needs-validation" id="form">
@@ -52,7 +53,7 @@
 			</div>
 			<div class="col-12">
 				<button type="submit" class="btn btn-primary" onclick="guardar()">Agregar</button>
-				<button type="reset" class="btn btn-primary" onclick="location.href='/proveedores/listar.jsp'">Cancelar</button>
+				<button type="reset" class="btn btn-primary" onclick="location.href='/Proveedores/listar.jsp'">Cancelar</button>
 			</div>
 		</form>
 	</div>
