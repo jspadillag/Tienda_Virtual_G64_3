@@ -20,25 +20,24 @@
 				<label class="form-label">Cédula</label> <input type="text"
 					class="form-control" id="inputCedula" name="cedula_usuario"
 					aria-describedby="inputGroupPrepend">
-				<button type="button" class="btn btn-success">Buscar</button>
+				<button type="button" onclick="buscar()" class="btn btn-success">Buscar</button>
 				<label class="form-label">Usuario</label> <input type="text"
-					class="form-control" id="inputCedula" name="cedula_usuario"
+					class="form-control" id="labelUsuario" name="nombre_usuario"
 					aria-describedby="inputGroupPrepend">
-
 			</div>
 			<div style="display: flex; align-items: center;">
 				<label class="form-label">Código del producto</label> <input type="text"
-					class="form-control" id="inputCedula" name="cedula_usuario"
+					class="form-control" id="inputCodigo" name="codigo_producto"
 					aria-describedby="inputGroupPrepend">
-				<button type="button" class="btn btn-success">Buscar</button>
+				<button type="button" onclick="buscarProducto()" class="btn btn-success">Buscar</button>
 				<label class="form-label">Producto</label> <input type="text"
-					class="form-control" id="inputCedula" name="cedula_usuario"
+					class="form-control" id="labelNombre" name="nombre_producto"
 					aria-describedby="inputGroupPrepend">
-
 			</div>
 		</form>
 	</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="/js/venta/venta.js"></script>
 </body>
 </html>

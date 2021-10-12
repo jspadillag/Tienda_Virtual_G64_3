@@ -17,10 +17,10 @@
 	<div class="mx-auto" style="width: 700px;" >
 		<form class="row g-3 needs-validation" id="form">
 			<div class="col-md-6">
-				<label for="inputCedula" class="form-label">Cï¿½dula</label> <input
+				<label for="inputCedula" class="form-label">Cédula</label> <input
 					type="text" class="form-control" id="inputCedula"
 					name="cedula_usuario" aria-describedby="inputGroupPrepend" required>
-				<div class="invalid-feedback">Por favor ingrese la cï¿½dula.</div>
+				<div class="invalid-feedback">Por favor ingrese la cédula.</div>
 			</div>
 
 			<div class="col-md-6">
@@ -36,10 +36,10 @@
 				<div class="invalid-feedback">Por favor ingrese el nombre.</div>
 			</div>
 			<div class="col-md-5">
-				<label for="inputContraseï¿½a" class="form-label">Contraseï¿½a</label> <input
+				<label for="inputContraseï¿½a" class="form-label">Contraseña</label> <input
 					type="text" class="form-control" id="inputContrasena"
 					name="password" aria-describedby="inputGroupPrepend" required>
-				<div class="invalid-feedback">Por favor ingrese la contraseï¿½a.
+				<div class="invalid-feedback">Por favor ingrese la contraseña.
 				</div>
 			</div>
 			<div class="col-12">
@@ -48,7 +48,7 @@
 					id="inputCorreo" placeholder="usuario@dominio.com"
 					name="email_usuario" aria-describedby="inputGroupPrepend" required>
 				<div class="invalid-feedback">Por favor ingrese el correo
-					electrÃ³nico.</div>
+					electrónico.</div>
 			</div>
 			<div class="col-12">
 				<button type="submit" class="btn btn-primary" onclick="guardar()">Agregar</button>
