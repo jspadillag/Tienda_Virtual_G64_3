@@ -12,14 +12,14 @@
 <title>editar Usuario</title>
 </head>
 <body>
-<jsp:include page="/menu/menu.jsp"></jsp:include>
 	<h1>Editar Usuario</h1>
 	<div class="mx-auto" style="width: 700px;" >
-		<form id="form" class="row g-3 needs-validation">
+		<form class="row g-3 needs-validation">
 			<div class="col-md-6">
-				<label class="form-label">CÃ©dula</label> <input
+				<label for="inputCedula" class="form-label">Cédula</label> <input
 					type="text" class="form-control" id="inputCedula"
-					name="cedula_usuario" aria-describedby="inputGroupPrepend">
+					name="cedula_usuario" aria-describedby="inputGroupPrepend" required>
+				<div class="invalid-feedback">Por favor ingrese la cédula.</div>
 			</div>
 
 			<div class="col-md-6">
@@ -35,19 +35,19 @@
 				<div class="invalid-feedback">Por favor ingrese el nombre.</div>
 			</div>
 			<div class="col-md-5">
-				<label for="inputContraseÃ±a" class="form-label">ContraseÃ±a</label> <input
+				<label for="inputContraseña" class="form-label">Contraseña</label> <input
 					type="text" class="form-control" id="inputContrasena"
 					name="password" aria-describedby="inputGroupPrepend" required>
-				<div class="invalid-feedback">Por favor ingrese la contraseÃ±a.
+				<div class="invalid-feedback">Por favor ingrese la contraseña.
 				</div>
 			</div>
 			<div class="col-12">
 				<label for="inputCorreo" class="form-label">Correo
-					electrÃ³nico</label> <input type="email" class="form-control"
+					electrónico</label> <input type="email" class="form-control"
 					id="inputCorreo" placeholder="usuario@dominio.com"
 					name="email_usuario" aria-describedby="inputGroupPrepend" required>
 				<div class="invalid-feedback">Por favor ingrese el correo
-					electrÃ³nico.</div>
+					electrónico.</div>
 			</div>
 			<div class="col-12">
 				<button type="submit" class="btn btn-primary" onclick="editar()">Editar</button>
@@ -57,6 +57,6 @@
 	</div>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="/js/editar.js"></script>
+	<script src="/js/guardar.js"></script>
 </body>
 </html>
