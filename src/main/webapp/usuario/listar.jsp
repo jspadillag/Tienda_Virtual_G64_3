@@ -18,10 +18,10 @@
 <table class="table table-sm">
 		<thead>
 			<tr>
-<th>Cï¿½dula</th>
+<th>Cédula</th>
 <th>Correo</th>
 <th>Nombre</th>
-<th>Contraseï¿½a</th>
+<th>Contraseña</th>
 <th>Usuario</th>
 <th colspan = "2">Acciones</th>
 </tr>
