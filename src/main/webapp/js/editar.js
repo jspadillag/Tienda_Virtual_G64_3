@@ -54,9 +54,3 @@ function editar() {
 		}
 	});
 }
-
-
-
-
-
-

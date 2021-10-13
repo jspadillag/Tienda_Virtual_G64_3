@@ -41,7 +41,7 @@ function editar() {
 		email_cliente: document.getElementById("inputCorreo").value,
 		nombre_cliente: document.getElementById("inputUsuario").value,
 		direccion_cliente: document.getElementById("inputDireccion").value,
-		telefono_cliente: document.getElementById("inputCorreo").value
+		telefono_cliente: document.getElementById("inputTelefono").value
 	};
 	$.ajax({
 		type: "PUT",
@@ -50,7 +50,6 @@ function editar() {
 		contentType: 'application/json',
 		data: JSON.stringify(usuario),
 		success: function(data) {
-			
 			window.location.href = "/cliente/listarcliente.jsp";
 		}
 	});
