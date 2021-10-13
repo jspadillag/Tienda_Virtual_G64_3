@@ -13,13 +13,13 @@
           <a class="nav-link active" aria-current="page" href="/cliente/listarcliente.jsp">Clientes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Proveedores</a>
+          <a class="nav-link active" aria-current="page" href="/Proveedores/listar.jsp">Proveedores</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/producto/guardarListarProducto.jsp">Productos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Ventas</a>
+          <a class="nav-link active" aria-current="page" href="/venta/venta.jsp">Ventas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Reportes</a>

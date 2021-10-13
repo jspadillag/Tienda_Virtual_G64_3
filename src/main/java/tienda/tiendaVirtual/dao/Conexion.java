@@ -13,7 +13,7 @@ public class Conexion {
 */
 	static String DATABASE = "tienda";
 	static String USER = "root";
-	static String PASSWORD = "admin123";
+	static String PASSWORD = "root";
 	static String URL = "jdbc:mysql://localhost:3306/"+DATABASE;
 	private Connection conexion = null;
 

@@ -1,6 +1,4 @@
-/**
- * 
- */function subirArchivo() {
+function subirArchivo() {
 
 	try {
 		var csvFile = document.getElementById("archivo");
@@ -89,5 +87,3 @@ function load_productos() {
 	}; 
 	xmlhttp.send();
 }
-
-

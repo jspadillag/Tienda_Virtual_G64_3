@@ -36,7 +36,7 @@
 				<div class="invalid-feedback">Por favor ingrese el nombre.</div>
 			</div>
 			<div class="col-md-5">
-				<label for="inputContraseña" class="form-label">Contraseña</label> <input
+				<label for="inputContraseï¿½a" class="form-label">Contraseña</label> <input
 					type="text" class="form-control" id="inputContrasena"
 					name="password" aria-describedby="inputGroupPrepend" required>
 				<div class="invalid-feedback">Por favor ingrese la contraseña.
@@ -44,7 +44,7 @@
 			</div>
 			<div class="col-12">
 				<label for="inputCorreo" class="form-label">Correo
-					electrónico</label> <input type="email" class="form-control"
+					electrÃ³nico</label> <input type="email" class="form-control"
 					id="inputCorreo" placeholder="usuario@dominio.com"
 					name="email_usuario" aria-describedby="inputGroupPrepend" required>
 				<div class="invalid-feedback">Por favor ingrese el correo
