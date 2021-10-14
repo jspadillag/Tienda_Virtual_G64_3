@@ -1,7 +1,5 @@
-var cedula;
-var codigo;
 
-function mostrar(cedula) {
+/*function mostrar(cedula) {
 	$.ajax({
 		type: "GET",
 		url: "http://localhost:8080/api/cliente/" + cedula,
@@ -11,7 +9,7 @@ function mostrar(cedula) {
 	});
 }
 
-/*function buscar() {
+function buscar() {
 	cedula = document.getElementById("inputCedula").value;
 	mostrar(cedula);
 */
@@ -23,13 +21,13 @@ function buscar() {
 		type: "GET",
 		url: "http://localhost:8080/api/cliente/" + cedula,
 		success: function(cliente) {
-			$('#labelUsuario').val(usuario.nombre_cliente);
+			$('#labelUsuario').val(cliente.nombre_cliente);
 		}
 	});
 }
 
 
-function mostrarProducto(codigo) {
+/*function mostrarProducto(codigo) {
 	$.ajax({
 		type: "GET",
 		url: "http://localhost:8080/api/producto/" + codigo,
@@ -39,15 +37,15 @@ function mostrarProducto(codigo) {
 			$('#labelNombre3').val(producto.nombre_producto);
 		}
 	});
-}
+}*/
 
 function buscarProducto(numero) {
 	var codigo;	
 	if(numero == 1){
 		codigo = document.getElementById("inputCodigo").value;
-	}else if (numero = 2) {
+	}else if (numero == 2) {
 		codigo = document.getElementById("inputCodigoDos").value;
-		}else if (numero = 3) {
+		}else if (numero == 3) {
 			codigo = document.getElementById("inputCodigoTres").value;
 			}
 	$.ajax({
