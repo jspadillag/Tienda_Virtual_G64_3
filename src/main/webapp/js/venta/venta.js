@@ -63,3 +63,4 @@ function buscarProducto(numero) {
 		}
 	});
 }
+
