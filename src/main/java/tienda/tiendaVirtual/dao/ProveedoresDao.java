@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tienda.tiendaVirtual.dto.Proveedores;
-import tienda.tiendaVirtual.dto.Usuario;
 
 
 	public class ProveedoresDao {

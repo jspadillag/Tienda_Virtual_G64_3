@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import tienda.tiendaVirtual.dao.ProveedoresDao;
-import tienda.tiendaVirtual.dao.UsuarioDao;
 import tienda.tiendaVirtual.dto.Proveedores;
-import tienda.tiendaVirtual.dto.Usuario;
+
 
 @RestController
 @RequestMapping("api/proveedores")
