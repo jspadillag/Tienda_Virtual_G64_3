@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import tienda.tiendaVirtual.dto.ListarVenta;
 import tienda.tiendaVirtual.dto.Venta;
 
 public class VentaDao {
@@ -35,11 +36,12 @@ public class VentaDao {
 		List<Venta> ventas = new ArrayList<Venta>();
 
 		Conexion conexion = new Conexion();
-		String sql = "SELECT ventas (cedula_cliente, cedula_usuario, iva_venta, total_venta, valor_venta FROM ventas";
+		String sql = "SELECT codigo_venta, cedula_cliente, cedula_usuario, iva_venta, total_venta, valor_venta FROM ventas";
 
 		try {
 			PreparedStatement preparedStatement = conexion.getConexion().prepareStatement(sql);
 			ResultSet resultSet = preparedStatement.executeQuery();
+				
 
 			while (resultSet.next()) {
 			
@@ -105,7 +107,7 @@ public class VentaDao {
 		Venta venta = new Venta();
 
 		Conexion conexion = new Conexion();
-		String sql = "SELECT ventas (cedula_cliente, cedula_usuario, iva_venta, total_venta, valor_venta FROM ventas WHERE codigo_venta = ?";
+		String sql = "SELECT codigo_venta, cedula_cliente, cedula_usuario, iva_venta, total_venta, valor_venta FROM ventas WHERE codigo_venta = ?";
 
 		PreparedStatement preparedSatement;
 		try {
@@ -129,5 +131,28 @@ public class VentaDao {
 		return venta;
 	}
 
+	public List<ListarVenta> listarVenta() {
+		List<ListarVenta> ventas = new ArrayList<ListarVenta>();
+		Conexion conexion = new Conexion();
+		String sql = "SELECT ventas.cedula_cliente, clientes.nombre_cliente, ventas.total_venta FROM ventas JOIN clientes ON ventas.cedula_cliente=clientes.cedula_cliente";
+		try {
+			PreparedStatement preparedStatement = conexion.getConexion().prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {			
+				ListarVenta lventa = new ListarVenta();
+				lventa.setCedula_cliente(resultSet.getLong("Cedula_cliente"));
+				lventa.setNombre_cliente(resultSet.getString("Nombre_Cliente"));
+				lventa.setTotal_venta(resultSet.getDouble("Total_venta"));
+				ventas.add(lventa);
+			}
+			preparedStatement.close();
+			conexion.desconectar();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return ventas;
+
+	}
 }
 

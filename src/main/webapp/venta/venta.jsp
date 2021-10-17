@@ -19,7 +19,7 @@
 		<form id="form" class="row g-3 needs-validation">
 		
 			<div style="display: flex; align-items: center;" class="col-md-4 position-relative" >
-				<label class="form-label">Cédula</label> <input type="text"
+				<label class="form-label">Cï¿½dula</label> <input type="text"
 					class="form-control" id="inputCedula" name="cedula_usuario"
 					aria-describedby="inputGroupPrepend">
 					<button type="button" onclick="buscar()" class="btn btn-success">Buscar</button>
@@ -38,7 +38,7 @@
 		
 		
 			<div  class="col-md-3 position-relative" >
-				<label class="form-label">Código producto</label> 
+				<label class="form-label">Cï¿½digo producto</label> 
 			<div style="display: flex; align-items: center;" >	
 				<input type="text"
 					class="form-control" id="inputCodigo" name="codigo_producto"

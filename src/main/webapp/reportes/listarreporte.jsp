@@ -16,7 +16,7 @@
 <table class="table table-sm">
 		<thead>
 			<tr>
-<th>Cédula</th>
+<th>Cï¿½dula</th>
 <th>Nombre</th>
 <th>Valor total ventas</th>
 </tr>
