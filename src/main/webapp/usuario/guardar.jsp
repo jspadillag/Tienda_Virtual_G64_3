@@ -9,12 +9,17 @@
 	rel="stylesheet"
 	integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
 	crossorigin="anonymous">
+<link href="/css/listar.css" rel="stylesheet">
+
 <title>Agregar</title>
 </head>
+
 <body>
 <jsp:include page="/menu/menu.jsp"></jsp:include>
 	<h1>Agregar Usuario</h1>
-	<div class="mx-auto" style="width: 700px;" >
+	
+	
+	<div class="mx-auto" style="width: 1000px;" >
 		<form class="row g-3 needs-validation" id="form">
 			<div class="col-md-6">
 				<label for="inputCedula" class="form-label">CÈdula</label> <input
@@ -44,7 +49,7 @@
 			</div>
 			<div class="col-12">
 				<label for="inputCorreo" class="form-label">Correo
-					electr√≥nico</label> <input type="email" class="form-control"
+					electronico</label> <input type="email" class="form-control"
 					id="inputCorreo" placeholder="usuario@dominio.com"
 					name="email_usuario" aria-describedby="inputGroupPrepend" required>
 				<div class="invalid-feedback">Por favor ingrese el correo
