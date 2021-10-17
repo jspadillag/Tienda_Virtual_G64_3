@@ -48,4 +48,10 @@ public class VentaApi {
 		return ventaDao.buscar(codigo_venta);
 	}
 
+	@GetMapping("/contadorventa")
+	public Integer contadorVentas() {
+		VentaDao ventaDao = new VentaDao();
+		return ventaDao.contadorVentas();
+	}
+
 }

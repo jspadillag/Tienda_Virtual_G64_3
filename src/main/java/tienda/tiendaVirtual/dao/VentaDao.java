@@ -20,12 +20,12 @@ public class VentaDao {
 			preparedStatement.setDouble(3, venta.getIva_venta());
 			preparedStatement.setDouble(4, venta.getTotal_venta());
 			preparedStatement.setDouble(5, venta.getValor_venta());
-			
+
 			preparedStatement.execute();
-			
+
 			preparedStatement.close();
-			conexion.desconectar();			
-		}catch (SQLException e) {
+			conexion.desconectar();
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return venta;
@@ -42,7 +42,7 @@ public class VentaDao {
 			ResultSet resultSet = preparedStatement.executeQuery();
 
 			while (resultSet.next()) {
-			
+
 				Venta venta = new Venta();
 				venta.setCodigo_venta(resultSet.getInt("Codigo_venta"));
 				venta.setCedula_cliente(resultSet.getLong("Cedula_cliente"));
@@ -74,7 +74,7 @@ public class VentaDao {
 			preparedStatement.setDouble(4, ventas.getTotal_venta());
 			preparedStatement.setDouble(5, ventas.getValor_venta());
 			preparedStatement.setInt(6, ventas.getCodigo_venta());
-			
+
 			preparedStatement.executeUpdate();
 
 			preparedStatement.close();
@@ -129,5 +129,39 @@ public class VentaDao {
 		return venta;
 	}
 
-}
+	public int contadorVentas() {
+		int contador = 0;
+		Conexion conex = new Conexion();
 
+		try {
+			PreparedStatement consulta = conex.getConexion()
+					.prepareStatement("select COUNT(*) as \"AUTO_INCREMENT\" from ventas");
+			ResultSet res = consulta.executeQuery();
+
+			while (res.next()) {
+				contador = (res.getInt("AUTO_INCREMENT"));
+			}
+
+			// cerrar resultado, sentencia y conexión
+			res.close();
+			consulta.close();
+			conex.desconectar();
+
+		} catch (SQLException e) {
+			// si hay un error en el sql mostrarlo
+			System.out.println("------------------- ERROR --------------");
+			System.out.println("No se pudo consultar contador");
+			System.out.println(e.getMessage());
+			System.out.println(e.getErrorCode());
+		} catch (Exception e) {
+			// si hay cualquier otro error mostrarlo
+			System.out.println("------------------- ERROR --------------");
+			System.out.println("No se pudo consultar contador");
+			System.out.println(e.getMessage());
+			System.out.println(e.getLocalizedMessage());
+		}
+
+		return contador + 1;
+	}
+
+}
