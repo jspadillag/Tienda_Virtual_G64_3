@@ -12,8 +12,10 @@
 	integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
 	crossorigin="anonymous">
 <link href="./css/index.css" rel="stylesheet">
+<link href="/css/listar.css" rel="stylesheet">
 </head>
 <body>
+
 <div class="contenedor">
 <form id="form" class="row g-3 needs-validation" novalidate>
 <h1 class="text-center">Bienvenido</h1>

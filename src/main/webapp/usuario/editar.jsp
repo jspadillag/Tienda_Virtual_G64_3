@@ -9,6 +9,7 @@
 	rel="stylesheet"
 	integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
 	crossorigin="anonymous">
+<link href="/css/listar.css" rel="stylesheet">
 <title>editar Usuario</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
 	<div class="mx-auto" style="width: 700px;" >
 		<form id="form" class="row g-3 needs-validation">
 			<div class="col-md-6">
-				<label class="form-label">Cédula</label> <input
+				<label class="form-label">Cedula</label> <input
 					type="text" class="form-control" id="inputCedula"
 					name="cedula_usuario" aria-describedby="inputGroupPrepend">
 			</div>

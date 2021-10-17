@@ -22,7 +22,7 @@
           <a class="nav-link active" aria-current="page" href="/venta/venta.jsp">Ventas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/reportes/listarreporte.jsp">Reportes</a>
+          <a class="nav-link active" aria-current="page" href="#">Reportes</a>
         </li>
         
       </ul>
