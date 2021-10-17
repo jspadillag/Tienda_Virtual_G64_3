@@ -10,7 +10,6 @@ import java.util.List;
 import tienda.tiendaVirtual.dto.Proveedores;
 
 
-
 	public class ProveedoresDao {
 
 		public Proveedores guardar(Proveedores proveedores) {
