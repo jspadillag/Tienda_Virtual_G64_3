@@ -16,53 +16,55 @@
 <body>
 	<jsp:include page="/menu/menu.jsp"></jsp:include>
 	<h1>Ventas</h1>
-	
-		
-	<div class="mx-auto" style="width: 1000px;">
-		<form id="form" class="row g-3 needs-validation">
-		
-			<div style="display: flex; align-items: center;" class="col-md-4 position-relative" >
-				<label class="form-label">Cedula</label> <input type="text"
-					class="form-control" id="inputCedula" name="cedula_usuario"
-					aria-describedby="inputGroupPrepend">
-					<button type="button" onclick="buscar()" class="btn btn-success">Consultar</button>
-			</div>
-			<div style="display: flex; align-items: center;"
-				class="col-md-4 position-relative">
 
-				<label class="form-label">Cliente</label> <input type="text"
-					class="form-control" id="labelUsuario" name="nombre_usuario"
-					aria-describedby="inputGroupPrepend">
+
+	<div class="mx-auto" style="width: 100%; padding: 0% 15% 0% 15%">
+		<form id="form" class="row g-3 needs-validation">
+			<div style="display: flex; justify-content: space-between;">
+				<div style="display: flex; align-items: center;"
+					class="col-md-4 position-relative">
+					<label class="form-label">Cedula</label> <input type="text"
+						class="form-control" id="inputCedula" name="cedula_usuario"
+						aria-describedby="inputGroupPrepend">
+					<button type="button" onclick="buscar()" class="btn btn-success">Consultar</button>
+				</div>
+				<div style="display: flex; align-items: center;"
+					class="col-md-4 position-relative">
+
+					<label class="form-label">Cliente</label> <input type="text"
+						class="form-control" id="labelUsuario" name="nombre_usuario"
+						aria-describedby="inputGroupPrepend">
+				</div>
+				<div style="display: flex; align-items: center;"
+					class="col-md-2 position-relative">
+					<label class="form-label">Consec.</label> <input type="text"
+						class="form-control" id="labelConsec" name="numero_consec"
+						aria-describedby="inputGroupPrepend" disabled>
+				</div>
 			</div>
-			<div style="display: flex; align-items: center;"
-				class="col-md-2 position-relative">
-				<label class="form-label">Consec.</label> <input type="text"
-					class="form-control" id="labelConsec" name="numero_consec"
-					aria-describedby="inputGroupPrepend">
+<hr>
+			<div class="col-md-3 position-relative" style="text-align: center;">
+				<label class="form-label">Código del producto</label>
+				<div style="display: flex; align-items: center;">
+					<input type="text" class="form-control" id="inputCodigo"
+						name="codigo_producto" aria-describedby="inputGroupPrepend">
+
+					<button type="button" onclick="buscarProducto(1)"
+						class="btn btn-success">Consultar</button>
+				</div>
 			</div>
-		
-		
-			<div  class="col-md-3 position-relative" >
-				<label class="form-label">Cod. producto</label> 
-			<div style="display: flex; align-items: center;" >	
-				<input type="text"
-					class="form-control" id="inputCodigo" name="codigo_producto"
-					aria-describedby="inputGroupPrepend">
-						
-				<button type="button" onclick="buscarProducto(1)" class="btn btn-success" >Consultar</button>
-			</div>	
-			</div>
-			<div  class="col-md-3 position-relative" >
+			<div class="col-md-3 position-relative" style="text-align: center;">
 				<label class="form-label">Nombre Producto</label> <input type="text"
 					class="form-control" id="labelNombre" name="nombre_producto"
 					aria-describedby="inputGroupPrepend">
 			</div>
-			<div  class="col-md-2 position-relative" >
-				<label class="form-label">Cant.</label> <input type="text"
-					class="form-control" id="labelCantidad1" name="cantidad_uno"
-					aria-describedby="inputGroupPrepend">
+			<div class="col-md-2 position-relative" style="text-align: center;">
+				<label class="form-label">Cant</label> <input type="text"
+					onchange="onChangeCant(1)" class="form-control" id="labelCantidad1"
+					name="cantidad_uno" aria-describedby="inputGroupPrepend"> <input
+					type="hidden" id="labelIva1">
 			</div>
-			<div class="col-md-3 position-relative">
+			<div class="col-md-3 position-relative" style="text-align: center;">
 				<label class="form-label">Valor Total</label> <input type="text"
 					class="form-control" id="labelTotal1" name="total_uno"
 					aria-describedby="inputGroupPrepend">
@@ -73,7 +75,7 @@
 				<input type="text" class="form-control" id="inputCodigoDos"
 					name="codigo_producto" aria-describedby="inputGroupPrepend">
 				<button type="button" onclick="buscarProducto(2)"
-					class="btn btn-success">Buscar</button>
+					class="btn btn-success">Consultar</button>
 			</div>
 			<div style="display: flex; align-items: center;"
 				class="col-md-3 position-relative">
@@ -102,7 +104,7 @@
 				<input type="text" class="form-control" id="inputCodigoTres"
 					name="codigo_producto" aria-describedby="inputGroupPrepend">
 				<button type="button" onclick="buscarProducto(3)"
-					class="btn btn-success">Buscar</button>
+					class="btn btn-success">Consultar</button>
 			</div>
 			<div style="display: flex; align-items: center;"
 				class="col-md-3 position-relative">
@@ -123,32 +125,34 @@
 					name="total_tres" aria-describedby="inputGroupPrepend">
 
 			</div>
-
-			<div style="display: flex; align-items: center;"
-				class="col-md-3 position-relative">
-				<label class="form-label">Total Venta</label> <input type="text"
-					class="form-control" id="labelTotalV" name="total_venta"
-					aria-describedby="inputGroupPrepend">
+			<div style="display: flex; justify-content: center;">
+				<div style="display: flex; align-items: center;"
+					class="col-md-3 position-relative">
+					<label class="form-label totales">Total Venta</label> <input type="text"
+						class="form-control" id="labelTotalV" name="total_venta"
+						aria-describedby="inputGroupPrepend">
+				</div>
+				<div style="display: flex; align-items: center;"
+					class="col-md-3 position-relative">
+					<label class="form-label totales">Total IVA</label> <input type="text"
+						class="form-control" id="labelTotalIva" name="total_iva"
+						aria-describedby="inputGroupPrepend">
+				</div>
+				<div style="display: flex; align-items: center;"
+					class="col-md-3 position-relative">
+					<label class="form-label totales">Total con IVA</label> <input type="text"
+						class="form-control" id="labelTotalconIva" name="total_coniva"
+						aria-describedby="inputGroupPrepend">
+				</div>
 			</div>
-			<div style="display: flex; align-items: center;"
-				class="col-md-3 position-relative">
-				<label class="form-label">Total IVA</label> <input type="text"
-					class="form-control" id="labelTotalIva" name="total_iva"
-					aria-describedby="inputGroupPrepend">
+			<div style="display: flex; justify-content: space-evenly;">
+				<div>
+					<button type="button" onclick="confirmar()" class="btn btn-success color-btn">Confirmar</button>
+				</div>
+				<div>
+					<button type="button" onclick="guardar()" class="btn btn-success color-btn">Guardar</button>
+				</div>
 			</div>
-			<div style="display: flex; align-items: center;"
-				class="col-md-3 position-relative">
-				<label class="form-label">Total con IVA</label> <input type="text"
-					class="form-control" id="labelTotalconIva" name="total_coniva"
-					aria-describedby="inputGroupPrepend">
-			</div>
-			<div>
-				<button type="button" onclick="confirmar()" class="btn btn-success">confirmar</button>
-			</div>
-			<div>
-				<button type="button" onclick="guardar()" class="btn btn-success">guardar</button>
-			</div>
-			
 		</form>
 	</div>
 	<script

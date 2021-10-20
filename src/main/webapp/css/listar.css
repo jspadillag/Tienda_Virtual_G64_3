@@ -4,6 +4,22 @@
 	color: red;
 }
 
+label {
+	margin-right: 5%;
+	margin-left: 7%;
+}
+
+.totales {
+	font-weight: bold; 
+	width: 100%;
+}
+
+.color-btn {
+	background-color: #ad8a1bf0;
+    width: 146%;
+    border: none;
+}
+
 .contenedor {    
 	padding-left: 10%;
     padding-right: 10%;
