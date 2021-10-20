@@ -29,3 +29,55 @@ h1 {
 	cursor: pointer;
 	color: blue;
 }
+
+.g-3, .gy-3 {
+    /* --bs-gutter-y: 1rem; */
+}
+
+element.style {
+    /* width: 700px; */
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #0f5132;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #0f5132;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #0f5132;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
+}
+
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: #0f5132;
+    text-align: var(--bs-body-text-align);
+    background-color: #1987541a;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: #198754;
+}
+
+.g-3, .gy-3 {
+    /* --bs-gutter-y: 1rem; */
+}
+
+.btn-outline-primary {
+    color: #198754;
+    border-color: #198754;
+}

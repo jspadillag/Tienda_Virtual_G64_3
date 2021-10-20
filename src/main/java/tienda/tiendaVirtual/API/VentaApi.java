@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import tienda.tiendaVirtual.dao.VentaDao;
+import tienda.tiendaVirtual.dto.ListarVenta;
 import tienda.tiendaVirtual.dto.Venta;
 
 @RestController
@@ -54,4 +55,9 @@ public class VentaApi {
 		return ventaDao.contadorVentas();
 	}
 
+	@GetMapping("/listarventas")
+	public List<ListarVenta> listarVenta() {
+		VentaDao ventaDao = new VentaDao();
+		return ventaDao.listarVenta();
+}
 }

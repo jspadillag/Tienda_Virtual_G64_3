@@ -9,21 +9,23 @@
 	rel="stylesheet"
 	integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
 	crossorigin="anonymous">
+<link href="/css/listar.css" rel="stylesheet">
 <title>Ventas</title>
 </head>
+
 <body>
 	<jsp:include page="/menu/menu.jsp"></jsp:include>
 	<h1>Ventas</h1>
-
-	<div class="mx-auto" style="width: 700px;">
+	
+		
+	<div class="mx-auto" style="width: 1000px;">
 		<form id="form" class="row g-3 needs-validation">
-
-			<div style="display: flex; align-items: center;"
-				class="col-md-4 position-relative">
-				<label class="form-label">Cédula</label> <input type="text"
+		
+			<div style="display: flex; align-items: center;" class="col-md-4 position-relative" >
+				<label class="form-label">Cedula</label> <input type="text"
 					class="form-control" id="inputCedula" name="cedula_usuario"
 					aria-describedby="inputGroupPrepend">
-				<button type="button" onclick="buscar()" class="btn btn-success">Buscar</button>
+					<button type="button" onclick="buscar()" class="btn btn-success">Consultar</button>
 			</div>
 			<div style="display: flex; align-items: center;"
 				class="col-md-4 position-relative">
@@ -38,28 +40,27 @@
 					class="form-control" id="labelConsec" name="numero_consec"
 					aria-describedby="inputGroupPrepend">
 			</div>
-
-
-			<div class="col-md-3 position-relative">
-				<label class="form-label">Código producto</label>
-				<div style="display: flex; align-items: center;">
-					<input type="text" class="form-control" id="inputCodigo"
-						name="codigo_producto" aria-describedby="inputGroupPrepend">
-
-					<button type="button" onclick="buscarProducto(1)"
-						class="btn btn-success">Buscar</button>
-				</div>
+		
+		
+			<div  class="col-md-3 position-relative" >
+				<label class="form-label">Cod. producto</label> 
+			<div style="display: flex; align-items: center;" >	
+				<input type="text"
+					class="form-control" id="inputCodigo" name="codigo_producto"
+					aria-describedby="inputGroupPrepend">
+						
+				<button type="button" onclick="buscarProducto(1)" class="btn btn-success" >Consultar</button>
+			</div>	
 			</div>
-			<div class="col-md-3 position-relative">
-				<label class="form-label">Producto</label> <input type="text"
+			<div  class="col-md-3 position-relative" >
+				<label class="form-label">Nombre Producto</label> <input type="text"
 					class="form-control" id="labelNombre" name="nombre_producto"
 					aria-describedby="inputGroupPrepend">
 			</div>
-			<div class="col-md-2 position-relative">
-				<label class="form-label">Cant</label> <input type="text"
-					onchange="onChangeCant(1)" class="form-control" id="labelCantidad1"
-					name="cantidad_uno" aria-describedby="inputGroupPrepend"> <input
-					type="hidden" id="labelIva1">
+			<div  class="col-md-2 position-relative" >
+				<label class="form-label">Cant.</label> <input type="text"
+					class="form-control" id="labelCantidad1" name="cantidad_uno"
+					aria-describedby="inputGroupPrepend">
 			</div>
 			<div class="col-md-3 position-relative">
 				<label class="form-label">Valor Total</label> <input type="text"
@@ -147,6 +148,7 @@
 			<div>
 				<button type="button" onclick="guardar()" class="btn btn-success">guardar</button>
 			</div>
+			
 		</form>
 	</div>
 	<script

@@ -9,6 +9,7 @@
 	rel="stylesheet"
 	integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
 	crossorigin="anonymous">
+<link href="/css/listar.css" rel="stylesheet">
 <title>Agregar</title>
 </head>
 <body>
